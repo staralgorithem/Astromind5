@@ -82,9 +82,9 @@ if prompt := st.chat_input("Write down your prompt here:"):
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
 
-    answer = query({"in-1": prompt})
+    answer = query({"in-0": prompt})
     # Extract the string from the response dictionary
-    response = answer.get('out-4', '')
+    response = answer.get('out-2', '')
 
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
